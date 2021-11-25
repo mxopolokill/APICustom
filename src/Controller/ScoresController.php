@@ -5,6 +5,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Entity\Scores;
 use App\Repository\ScoresRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Assets;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -20,15 +21,30 @@ use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
-class ScoresController  extends  AbstractController
+
+
+const TOKEN = "T2RE132201465140261546546548464";
+
+
+class ScoresController extends  AbstractController
 { 
     /**
      * @Route("/api/Scores", name="api_post", methods={"GET"})
      */
     public function index(ScoresRepository $ScoresRepository)
-    {
+    {   if(isset($_GET["TOKEN"])) {
+        if($_GET["TOKEN"] == TOKEN ) {
+            return $this->json($ScoresRepository->findorderDESC(), 200, [], ['groups' => 'read']);
+        }else{
+            return $this->json("ta loucher ! ton token est incorecte !", 401);
+        }
+        
+    }
+    else {
+        return $this->json("oublie pas mon token ! , sinon T coincer ici !", 401);
+    }
 
-        return $this->json($ScoresRepository->findorderDESC(), 200, [], ['groups' => 'read']);
+       
 
     }
 

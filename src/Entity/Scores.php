@@ -33,7 +33,7 @@ class Scores
     private $pseudo;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="integer", length=255)
      * @Groups("read")
      */
     private $score;
@@ -55,12 +55,12 @@ class Scores
         return $this;
     }
 
-    public function getScore(): ?string
+    public function getScore(): ?int
     {
         return $this->score;
     }
 
-    public function setScore(string $score): self
+    public function setScore(int $score): self
     {
         $this->score = $score;
 
