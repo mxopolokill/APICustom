@@ -28,7 +28,7 @@ class ScoresController  extends  AbstractController
     public function index(ScoresRepository $ScoresRepository)
     {
 
-        return $this->json($ScoresRepository->findAll(), 200, [], ['groups' => 'read']);
+        return $this->json($ScoresRepository->findorderDESC(), 200, [], ['groups' => 'read']);
 
     }
 
