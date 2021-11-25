@@ -67,13 +67,13 @@ class Scores
         return $this;
     }
 
-    public function toArray()
+/*    public function toArray()
 {
     return [
         'id' => $this->getId(),
         'pseudo' => $this->getPseudo(),
         'score' => $this->getScore(),
     ];
-}
+} */
 
 }
