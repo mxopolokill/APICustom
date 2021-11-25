@@ -10,6 +10,7 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method Scores|null find($id, $lockMode = null, $lockVersion = null)
  * @method Scores|null findOneBy(array $criteria, array $orderBy = null)
  * @method Scores[]    findAll()
+ * @method Scores[]    findAll()
  * @method Scores[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
 class ScoresRepository extends ServiceEntityRepository
@@ -22,19 +23,19 @@ class ScoresRepository extends ServiceEntityRepository
     // /**
     //  * @return Scores[] Returns an array of Scores objects
     //  */
-    /*
-    public function findByExampleField($value)
+    
+    public function findorderDESC()
     {
         return $this->createQueryBuilder('s')
-            ->andWhere('s.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('s.id', 'ASC')
+            //->andWhere('s.exampleField = :val')
+            //->setParameter('val', $value)
+            ->orderBy('s.score', 'DESC')
             ->setMaxResults(10)
             ->getQuery()
             ->getResult()
         ;
     }
-    */
+    
 
     /*
     public function findOneBySomeField($value): ?Scores
