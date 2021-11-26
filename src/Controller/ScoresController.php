@@ -20,55 +20,100 @@ use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
-
+use Symfony\Component\Routing\Annotation\Token as TOKEN;
 
 
 const TOKEN = "T2RE132201465140261546546548464";
 
-
 class ScoresController extends  AbstractController
 { 
+    ////////////////////////////////////////////////////////////////////////////////////
+    //                          Function GET pour voir tout les scores                //
+   //                              Route sécuriser par token                         //
+  ////////////////////////////////////////////////////////////////////////////////////
+
     /**
-     * @Route("/api/Scores", name="api_post", methods={"GET"})
+     * @Route("/api/Scores", name="api_post_total", methods={"GET"})
      */
-    public function index(ScoresRepository $ScoresRepository)
+   public function total(ScoresRepository $ScoresRepository)
+        //si ?TOKEN ET présent dans La requete 
     {   if(isset($_GET["TOKEN"])) {
+        //Si la valeur du TOKEN  donner et strictement égual a la valeur du TOKEN 
         if($_GET["TOKEN"] == TOKEN ) {
-            return $this->json($ScoresRepository->findorderDESC(), 200, [], ['groups' => 'read']);
+            //Je retourne tout les scores 
+            return $this->json($ScoresRepository->findAll(), 200, [], ['groups' => 'read']);
         }else{
+            //Si la valeur du TOKEN et incorecte je retourne un message d'erreur 
             return $this->json("ta loucher ! ton token est incorecte !", 401);
-        }
-        
+        }   
     }
     else {
+        //Si ?TOKEN etnon detecter dans L'url je retourne un message d'erreur 
+        return $this->json("oublie pas mon token ! , sinon T coincer ici !", 401);
+    }}
+
+     ////////////////////////////////////////////////////////////////////////////////////
+    //                Function GET pour voir les 10 derniers meilleurs scores         //
+   //                              Route sécuriser par token                         //
+  ////////////////////////////////////////////////////////////////////////////////////
+
+    /**
+     * @Route("/api/Classement", name="api_post", methods={"GET"})
+     */
+    public function index(ScoresRepository $ScoresRepository)
+    //si ?TOKEN ET présent dans La requete 
+    {   if(isset($_GET["TOKEN"])) {
+        
+        //Si la valeur du TOKEN  donner et strictement égual a la valeur du TOKEN
+        if($_GET["TOKEN"] == TOKEN ) {
+             //Je retourne Les 10 meilleurs scores 
+            return $this->json($ScoresRepository->findorderDESC(), 200, [], ['groups' => 'read']);
+        }else{
+        //Si la valeur du TOKEN et incorecte je retourne un message d'erreur 
+            return $this->json("ta loucher ! ton token est incorecte !", 401);
+        }}
+    else {
+         //Si ?TOKEN etnon detecter dans L'url je retourne un message d'erreur 
         return $this->json("oublie pas mon token ! , sinon T coincer ici !", 401);
     }
+  }
 
-       
 
-    }
+
+
+     ////////////////////////////////////////////////////////////////////////////////////
+    //                          Function POST pour ajout score                        //
+   //                              Route sécuriser par token                         //
+  ////////////////////////////////////////////////////////////////////////////////////
 
      /**
-     * @Route("/api/Scores", name="api_post_scores", methods={"POST"})
+     * @Route("/api/add_Scores", name="api_post_scores", methods={"POST"})
      */
     public function Newscore(Request $request, SerializerInterface $serializer, EntityManagerInterface $manager, ValidatorInterface $validator)
-    {
+    {  //si ?TOKEN ET présent dans La requete 
+        if(isset($_GET["TOKEN"])) {
+        //Si la valeur du TOKEN  donner et strictement égual a la valeur du TOKEN
+            if($_GET["TOKEN"] == TOKEN ) {
+        //
         $jsonRecu = $request->getContent();
 
-       
+        //
         try{
+            //
             $score = $serializer->deserialize($jsonRecu, Scores::class, 'json');
-       
+            //
            $errors = $validator->validate($score);
-
+           //
            if(count($errors) > 0 )
            {
+            //
              return $this->json($errors, 400);
             }
+            //
             $manager->persist($score);
-
+            //
             $manager->flush();
-      
+            //
            return $this->json($score, 201, [], ['groups' => 'read']);
 
      }catch (NotEncodableValueException $encode){
@@ -77,7 +122,14 @@ class ScoresController extends  AbstractController
                'message' => $encode->getMessage()
            ], 400); 
         }
+    }else{
+        //Si la valeur du TOKEN et incorecte je retourne un message d'erreur 
+        return $this->json("ta loucher ! ton token est incorecte !", 401);
     }
-
+ }else {
+     //Si ?TOKEN etnon detecter dans L'url je retourne un message d'erreur 
+    return $this->json("oublie pas mon token ! , sinon T coincer ici !", 401);
+}
+}
     
 }
