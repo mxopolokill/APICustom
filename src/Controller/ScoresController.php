@@ -22,7 +22,9 @@ use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 
-Const TOKEN = "T2RE132201465140261546546548464";
+
+
+
 
 
 class ScoresController extends  AbstractController
@@ -37,10 +39,25 @@ class ScoresController extends  AbstractController
      */
 
    public function total(ScoresRepository $ScoresRepository)
+
+
+
+   
         //si ?TOKEN ET présent dans La requete 
     {   if(isset($_GET["TOKEN"])) {
+
+        // chemin d'accès fichier JSON
+        $fichierjson = __DIR__ .'/Token.json'; 
+                    // mettre le contenu du fichier dans une variable
+            $datajson = file_get_contents($fichierjson); 
+                // décoder le flux JSON
+            $objetjson = json_decode($datajson, true); 
+
+                // accéder à l'élément 
+            $SécurityAccess = $objetjson["TOKEN"];
+
         //Si la valeur du TOKEN  donner et strictement égual a la valeur du TOKEN 
-        if($_GET["TOKEN"] == TOKEN ) {
+        if($_GET["TOKEN"] == $SécurityAccess ) {
             //Je retourne tout les scores 
             return $this->json($ScoresRepository->findAll(), 200, [], ['groups' => 'read']);
         }else{
@@ -65,9 +82,19 @@ class ScoresController extends  AbstractController
     public function index(ScoresRepository $ScoresRepository)
     //si ?TOKEN ET présent dans La requete 
     {   if(isset($_GET["TOKEN"])) {
+
+        // chemin d'accès fichier JSON
+        $fichierjson = __DIR__ .'/Token.json'; 
+                    // mettre le contenu du fichier dans une variable
+            $datajson = file_get_contents($fichierjson); 
+                // décoder le flux JSON
+            $objetjson = json_decode($datajson, true); 
+
+                // accéder à l'élément 
+            $SécurityAccess = $objetjson["TOKEN"];
         
         //Si la valeur du TOKEN  donner et strictement égual a la valeur du TOKEN
-        if($_GET["TOKEN"] == TOKEN) {
+        if($_GET["TOKEN"] == $SécurityAccess) {
              //Je retourne Les 10 meilleurs scores 
             return $this->json($ScoresRepository->findorderDESC(), 200, [], ['groups' => 'read']);
         }else{
@@ -95,8 +122,19 @@ class ScoresController extends  AbstractController
     public function Newscore(Request $request, SerializerInterface $serializer, EntityManagerInterface $manager, ValidatorInterface $validator)
     {  //si ?TOKEN ET présent dans La requete 
         if(isset($_GET["TOKEN"])) {
+
+            // chemin d'accès fichier JSON
+        $fichierjson = __DIR__ .'/Token.json'; 
+            // mettre le contenu du fichier dans une variable
+        $datajson = file_get_contents($fichierjson); 
+            // décoder le flux JSON
+        $objetjson = json_decode($datajson, true);  
+
+            // accéder à l'élément 
+        $SécurityAccess = $objetjson["TOKEN"];
+
         //Si la valeur du TOKEN  donner et strictement égual a la valeur du TOKEN
-            if($_GET["TOKEN"] == TOKEN ) {
+            if($_GET["TOKEN"] == $SécurityAccess ) {
         //
         $jsonRecu = $request->getContent();
 
