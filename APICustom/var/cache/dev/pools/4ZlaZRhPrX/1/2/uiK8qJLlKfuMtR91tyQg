@@ -1,0 +1,3 @@
+<?php //AdminScore%255CScoresCrudController
+
+return [PHP_INT_MAX, []];
