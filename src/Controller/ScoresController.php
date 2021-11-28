@@ -20,10 +20,10 @@ use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
-use Symfony\Component\Routing\Annotation\Token as TOKEN;
 
 
-const TOKEN = "T2RE132201465140261546546548464";
+Const TOKEN = "T2RE132201465140261546546548464";
+
 
 class ScoresController extends  AbstractController
 { 
@@ -35,6 +35,7 @@ class ScoresController extends  AbstractController
     /**
      * @Route("/api/Scores", name="api_post_total", methods={"GET"})
      */
+
    public function total(ScoresRepository $ScoresRepository)
         //si ?TOKEN ET présent dans La requete 
     {   if(isset($_GET["TOKEN"])) {
@@ -60,12 +61,13 @@ class ScoresController extends  AbstractController
     /**
      * @Route("/api/Classement", name="api_post", methods={"GET"})
      */
+
     public function index(ScoresRepository $ScoresRepository)
     //si ?TOKEN ET présent dans La requete 
     {   if(isset($_GET["TOKEN"])) {
         
         //Si la valeur du TOKEN  donner et strictement égual a la valeur du TOKEN
-        if($_GET["TOKEN"] == TOKEN ) {
+        if($_GET["TOKEN"] == TOKEN) {
              //Je retourne Les 10 meilleurs scores 
             return $this->json($ScoresRepository->findorderDESC(), 200, [], ['groups' => 'read']);
         }else{
@@ -89,6 +91,7 @@ class ScoresController extends  AbstractController
      /**
      * @Route("/api/add_Scores", name="api_post_scores", methods={"POST"})
      */
+    
     public function Newscore(Request $request, SerializerInterface $serializer, EntityManagerInterface $manager, ValidatorInterface $validator)
     {  //si ?TOKEN ET présent dans La requete 
         if(isset($_GET["TOKEN"])) {
@@ -131,5 +134,5 @@ class ScoresController extends  AbstractController
     return $this->json("oublie pas mon token ! , sinon T coincer ici !", 401);
 }
 }
-    
+   
 }
