@@ -1,0 +1,12 @@
+
+Route GET tout les scores
+
+http://127.0.0.1:8000/api/Scores?TOKEN=T2RE132201465140261546546548464
+
+Route GET les 10 meilleurs scores 
+
+http://127.0.0.1:8000/api/Classement?TOKEN=T2RE132201465140261546546548464
+
+Route POST ajout d'un score 
+
+http://127.0.0.1:8000/api/add_Scores?TOKEN=T2RE132201465140261546546548464
