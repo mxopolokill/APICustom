@@ -119,6 +119,7 @@ class ScoresController extends  AbstractController
     
     public function Newscore(Request $request, SerializerInterface $serializer, EntityManagerInterface $manager, ValidatorInterface $validator)
     {  //si ?TOKEN ET présent dans La requete 
+
         if(isset($_GET["TOKEN"])) {
 
             // chemin d'accès fichier JSON
@@ -143,16 +144,17 @@ class ScoresController extends  AbstractController
             
            $errors = $validator->validate($score);
            
+           
            if(count($errors) > 0 )
            {
-            
+             
              return $this->json($errors, 400);
             }
             
             $manager->persist($score);
             
             $manager->flush();
-            
+          
            return $this->json($score, 201, [], ['groups' => 'read']);
 
      }catch (NotEncodableValueException $encode){
@@ -161,6 +163,7 @@ class ScoresController extends  AbstractController
                'message' => $encode->getMessage()
            ], 400); 
         }
+    
     }else{
         //Si la valeur du TOKEN et incorecte je retourne un message d'erreur 
         return $this->json("ta loucher ! ton token est incorecte !", 401);
