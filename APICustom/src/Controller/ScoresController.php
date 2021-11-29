@@ -46,13 +46,12 @@ class ScoresController extends  AbstractController
         //si ?TOKEN ET présent dans La requete 
     {   if(isset($_GET["TOKEN"])) {
 
-            // chemin d'accès fichier JSON
+                // chemin d'accès fichier JSON
             $fichierjson = __DIR__ .'/Token.json'; 
-                    // mettre le contenu du fichier dans une variable
+                // mettre le contenu du fichier dans une variable
             $datajson = file_get_contents($fichierjson); 
                 // décoder le flux JSON
             $objetjson = json_decode($datajson, true); 
-
                 // accéder à l'élément 
             $SécurityAccess = $objetjson["TOKEN"];
 
@@ -83,13 +82,12 @@ class ScoresController extends  AbstractController
     //si ?TOKEN ET présent dans La requete 
     {   if(isset($_GET["TOKEN"])) {
 
-        // chemin d'accès fichier JSON
-        $fichierjson = __DIR__ .'/Token.json'; 
-                    // mettre le contenu du fichier dans une variable
+                // chemin d'accès fichier JSON
+            $fichierjson = __DIR__ .'/Token.json'; 
+                // mettre le contenu du fichier dans une variable
             $datajson = file_get_contents($fichierjson); 
                 // décoder le flux JSON
             $objetjson = json_decode($datajson, true); 
-
                 // accéder à l'élément 
             $SécurityAccess = $objetjson["TOKEN"];
         
@@ -135,26 +133,26 @@ class ScoresController extends  AbstractController
 
         //Si la valeur du TOKEN  donner et strictement égual a la valeur du TOKEN
             if($_GET["TOKEN"] == $SécurityAccess ) {
-        //
+        
         $jsonRecu = $request->getContent();
 
-        //
+        
         try{
-            //
+            
             $score = $serializer->deserialize($jsonRecu, Scores::class, 'json');
-            //
+            
            $errors = $validator->validate($score);
-           //
+           
            if(count($errors) > 0 )
            {
-            //
+            
              return $this->json($errors, 400);
             }
-            //
+            
             $manager->persist($score);
-            //
+            
             $manager->flush();
-            //
+            
            return $this->json($score, 201, [], ['groups' => 'read']);
 
      }catch (NotEncodableValueException $encode){
