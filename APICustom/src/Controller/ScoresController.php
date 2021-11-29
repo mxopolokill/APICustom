@@ -46,8 +46,8 @@ class ScoresController extends  AbstractController
         //si ?TOKEN ET présent dans La requete 
     {   if(isset($_GET["TOKEN"])) {
 
-        // chemin d'accès fichier JSON
-        $fichierjson = __DIR__ .'/Token.json'; 
+            // chemin d'accès fichier JSON
+            $fichierjson = __DIR__ .'/Token.json'; 
                     // mettre le contenu du fichier dans une variable
             $datajson = file_get_contents($fichierjson); 
                 // décoder le flux JSON

@@ -17,6 +17,7 @@ class AppFixtures extends Fixture
             $Scores = new Scores();
             $Scores->setPseudo("");
             $Scores->setScore("");
+            $Scores->setTimer("");
         }
 
         $manager->flush();

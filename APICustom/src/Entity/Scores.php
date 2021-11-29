@@ -38,6 +38,12 @@ class Scores
      */
     private $score;
 
+    /**
+     * @ORM\Column(type="integer")
+     * @Groups("read")
+     */
+    private $Timer;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -75,5 +81,17 @@ class Scores
         'score' => $this->getScore(),
     ];
 } */
+
+public function getTimer(): ?int
+{
+    return $this->Timer;
+}
+
+public function setTimer(int $Timer): self
+{
+    $this->Timer = $Timer;
+
+    return $this;
+}
 
 }
