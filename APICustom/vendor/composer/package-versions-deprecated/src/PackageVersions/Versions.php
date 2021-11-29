@@ -119,10 +119,10 @@ final class Versions
   'doctrine/doctrine-fixtures-bundle' => '3.4.1@31ba202bebce0b66fe830f49f96228dcdc1503e7',
   'fzaninotto/faker' => 'v1.5.0@d0190b156bcca848d401fb80f31f504f37141c8d',
   'symfony/maker-bundle' => 'v1.36.3@0f40c826c0725208c254ddcd3481690e6c7e5047',
-  'symfony/polyfill-ctype' => '*@992dbf607d1792377f0f41cb39498623e0f4f11c',
-  'symfony/polyfill-iconv' => '*@992dbf607d1792377f0f41cb39498623e0f4f11c',
-  'symfony/polyfill-php72' => '*@992dbf607d1792377f0f41cb39498623e0f4f11c',
-  '__root__' => 'dev-master@992dbf607d1792377f0f41cb39498623e0f4f11c',
+  'symfony/polyfill-ctype' => '*@dfeef8b611263887b6368e0552880c64da3b0758',
+  'symfony/polyfill-iconv' => '*@dfeef8b611263887b6368e0552880c64da3b0758',
+  'symfony/polyfill-php72' => '*@dfeef8b611263887b6368e0552880c64da3b0758',
+  '__root__' => 'dev-master@dfeef8b611263887b6368e0552880c64da3b0758',
 );
 
     private function __construct()

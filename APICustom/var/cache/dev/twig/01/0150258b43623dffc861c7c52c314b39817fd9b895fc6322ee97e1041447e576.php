@@ -64,6 +64,6 @@ class __TwigTemplate_dfb4d7275a43346b007edffc8b11af34564bebba6747d9223fe3a6dcbca
     public function getSourceContext()
     {
         return new Source("<span class=\"badge badge-secondary\">{{ 'label.null'|trans(domain = 'EasyAdminBundle') }}</span>
-", "@EasyAdmin/label/null.html.twig", "C:\\wamp64\\www\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\label\\null.html.twig");
+", "@EasyAdmin/label/null.html.twig", "C:\\wamp64\\www\\APICustom\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\label\\null.html.twig");
     }
 }

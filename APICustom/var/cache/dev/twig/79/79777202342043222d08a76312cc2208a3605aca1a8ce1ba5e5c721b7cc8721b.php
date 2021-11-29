@@ -107,6 +107,6 @@ class __TwigTemplate_ce75bc3547502fe5fd021f91413d5e41febc006f8a3e895ebfd28be2ccc
 
     {{ form_widget(filters_form) }}
 {{ form_end(filters_form) }}
-", "@EasyAdmin/crud/filters.html.twig", "C:\\wamp64\\www\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\filters.html.twig");
+", "@EasyAdmin/crud/filters.html.twig", "C:\\wamp64\\www\\APICustom\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\filters.html.twig");
     }
 }

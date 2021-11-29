@@ -110,6 +110,6 @@ class __TwigTemplate_b05adc69a923aac48fd24ca7adb09ecccc3eaa057e6d2672793cfa54e05
         </div>
     </div>
 </div>
-", "@EasyAdmin/crud/includes/_batch_action_modal.html.twig", "C:\\wamp64\\www\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\includes\\_batch_action_modal.html.twig");
+", "@EasyAdmin/crud/includes/_batch_action_modal.html.twig", "C:\\wamp64\\www\\APICustom\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\includes\\_batch_action_modal.html.twig");
     }
 }

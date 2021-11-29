@@ -75,6 +75,6 @@ class __TwigTemplate_8cbdda699e3e7a30e49b89881f5f16592339ae13cc91768851d8e44abb0
 {% for encore_asset in assets %}
     {{ ea_call_function_if_exists('encore_entry_script_tags', encore_asset.value, encore_asset.webpackPackageName, encore_asset.webpackEntrypointName, encore_asset.htmlAttributes) }}
 {% endfor %}
-", "@EasyAdmin/includes/_encore_script_tags.html.twig", "C:\\wamp64\\www\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\includes\\_encore_script_tags.html.twig");
+", "@EasyAdmin/includes/_encore_script_tags.html.twig", "C:\\wamp64\\www\\APICustom\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\includes\\_encore_script_tags.html.twig");
     }
 }

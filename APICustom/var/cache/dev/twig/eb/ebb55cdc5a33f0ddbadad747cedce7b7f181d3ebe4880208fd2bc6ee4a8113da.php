@@ -146,6 +146,6 @@ class __TwigTemplate_53fbb04dec4cab1de808734ab5244c4fc03cb1b87d58338c6033beca568
         </div>
     </div>
 {% endif %}
-", "@EasyAdmin/crud/field/code_editor.html.twig", "C:\\wamp64\\www\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\field\\code_editor.html.twig");
+", "@EasyAdmin/crud/field/code_editor.html.twig", "C:\\wamp64\\www\\APICustom\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\field\\code_editor.html.twig");
     }
 }

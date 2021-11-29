@@ -119,6 +119,6 @@ class __TwigTemplate_599f9b3c35a5ea954630fdec4df87cc82bd9068f9e4dbb6fd53bb943c23
         {% for attr, value in css_asset.htmlAttributes %}{{ attr }}=\"{{ value|e('html_attr') }}\" {% endfor %}>
     {% endif %}
 {% endfor %}
-", "@EasyAdmin/includes/_css_assets.html.twig", "C:\\wamp64\\www\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\includes\\_css_assets.html.twig");
+", "@EasyAdmin/includes/_css_assets.html.twig", "C:\\wamp64\\www\\APICustom\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\includes\\_css_assets.html.twig");
     }
 }

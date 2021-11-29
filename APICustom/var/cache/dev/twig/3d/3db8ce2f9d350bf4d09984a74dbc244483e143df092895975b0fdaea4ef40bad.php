@@ -85,6 +85,6 @@ class __TwigTemplate_418ac6fd04edf5669a54a893e3650581e13dafa1de1241cfe96e9e2f75f
 {% if field.customOptions.get('showName') %}
     {{ field.formattedValue ?? '' }}
 {% endif %}
-", "@EasyAdmin/crud/field/locale.html.twig", "C:\\wamp64\\www\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\field\\locale.html.twig");
+", "@EasyAdmin/crud/field/locale.html.twig", "C:\\wamp64\\www\\APICustom\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\field\\locale.html.twig");
     }
 }

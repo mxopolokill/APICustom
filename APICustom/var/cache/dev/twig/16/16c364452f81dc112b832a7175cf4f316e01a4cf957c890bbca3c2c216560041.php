@@ -69,6 +69,6 @@ class __TwigTemplate_2f0a5b9fede246b2551081f5da339896f6eaace07b3b12b4e3d24fa6f05
     <polygon fill=\"#AAA\" points=\"18 8.5 24 8.5 24 15.5 19.5 15.5\" />
     <polygon fill=\"#AAA\" points=\"0 17 6.5 17 7.5 21 8.5 17 13 17 12 21 21 21 20 17 24 17 24 24 0 24\" />
 </svg>
-", "@DoctrineMigrations/Collector/icon.svg", "C:\\wamp64\\www\\APICustom\\vendor\\doctrine\\doctrine-migrations-bundle\\Resources\\views\\Collector\\icon.svg");
+", "@DoctrineMigrations/Collector/icon.svg", "C:\\wamp64\\www\\APICustom\\APICustom\\vendor\\doctrine\\doctrine-migrations-bundle\\Resources\\views\\Collector\\icon.svg");
     }
 }

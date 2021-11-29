@@ -149,6 +149,6 @@ class __TwigTemplate_e1dd27696482ec10074b97ed762537e3a696c56d38d8d41574f46baccd6
         </span>
     </button>
 {% endif %}
-", "@EasyAdmin/crud/action.html.twig", "C:\\wamp64\\www\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\action.html.twig");
+", "@EasyAdmin/crud/action.html.twig", "C:\\wamp64\\www\\APICustom\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\action.html.twig");
     }
 }

@@ -208,6 +208,6 @@ class {{ dashboard_controller_class }} extends AbstractDashboardController
 }
     </pre>
 {% endblock %}
-", "@EasyAdmin/welcome.html.twig", "C:\\wamp64\\www\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\welcome.html.twig");
+", "@EasyAdmin/welcome.html.twig", "C:\\wamp64\\www\\APICustom\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\welcome.html.twig");
     }
 }

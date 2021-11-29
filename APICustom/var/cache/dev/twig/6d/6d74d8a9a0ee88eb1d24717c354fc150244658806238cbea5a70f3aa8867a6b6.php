@@ -122,6 +122,6 @@ class __TwigTemplate_c80d8e3985b1e33fc628f822275fa79d8f81094dc11940dc1de04b922a5
         </div>
     </div>
 </div>
-", "@EasyAdmin/crud/includes/_delete_form.html.twig", "C:\\wamp64\\www\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\includes\\_delete_form.html.twig");
+", "@EasyAdmin/crud/includes/_delete_form.html.twig", "C:\\wamp64\\www\\APICustom\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\includes\\_delete_form.html.twig");
     }
 }

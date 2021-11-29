@@ -98,6 +98,6 @@ class __TwigTemplate_fa6ba868d366481c171ce548e3d4ff23bdeb1499bd9ffb895a08517635e
 {% else %}
     {{ field.formattedValue }}
 {% endif %}
-", "@EasyAdmin/crud/field/array.html.twig", "C:\\wamp64\\www\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\field\\array.html.twig");
+", "@EasyAdmin/crud/field/array.html.twig", "C:\\wamp64\\www\\APICustom\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\field\\array.html.twig");
     }
 }

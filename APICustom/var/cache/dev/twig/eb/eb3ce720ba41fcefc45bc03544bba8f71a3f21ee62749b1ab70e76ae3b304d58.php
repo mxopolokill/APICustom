@@ -211,6 +211,6 @@ class __TwigTemplate_eda5885f47b5c3e0753c048060b15dd3c4e040c8de8ed59d7769ecba1ec
         </ul>
     </nav>
 </div>
-", "@EasyAdmin/crud/paginator.html.twig", "C:\\wamp64\\www\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\paginator.html.twig");
+", "@EasyAdmin/crud/paginator.html.twig", "C:\\wamp64\\www\\APICustom\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\paginator.html.twig");
     }
 }

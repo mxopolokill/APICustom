@@ -86,6 +86,6 @@ class __TwigTemplate_d6050106a17f9c7d203cfd1102bddbf5cb4be08ed806918d896792a8335
 {% else %}
     <a target=\"_blank\" rel=\"noopener\" href=\"{{ field.value }}\">{{ field.formattedValue }}</a>
 {% endif %}
-", "@EasyAdmin/crud/field/url.html.twig", "C:\\wamp64\\www\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\field\\url.html.twig");
+", "@EasyAdmin/crud/field/url.html.twig", "C:\\wamp64\\www\\APICustom\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\field\\url.html.twig");
     }
 }

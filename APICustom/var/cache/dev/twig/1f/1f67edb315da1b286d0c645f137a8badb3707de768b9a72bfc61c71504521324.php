@@ -96,6 +96,6 @@ class __TwigTemplate_c6751a5dc8a84322da1bce1259f66d49754b0b822242d4145627b0e8326
         {{ field.formattedValue }}
     {% endif %}
 {% endif %}
-", "@EasyAdmin/crud/field/association.html.twig", "C:\\wamp64\\www\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\field\\association.html.twig");
+", "@EasyAdmin/crud/field/association.html.twig", "C:\\wamp64\\www\\APICustom\\APICustom\\vendor\\easycorp\\easyadmin-bundle\\src\\Resources\\views\\crud\\field\\association.html.twig");
     }
 }
