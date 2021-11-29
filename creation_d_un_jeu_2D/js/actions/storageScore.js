@@ -60,7 +60,7 @@ aPromise
 
 .then(function (myJSON){
   myJSON.forEach((user) =>{
-
+  
     textName.innerHTML+= 
     `<tr>
         <td>${user.pseudo} </td>
