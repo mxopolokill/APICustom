@@ -112,3 +112,7 @@ table th, td {
 .btn{
   text-decoration: none;
 }
+
+table{
+  background: #fefefe67;
+}
